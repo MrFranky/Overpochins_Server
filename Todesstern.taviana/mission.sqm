@@ -3,88 +3,45 @@ class Mission
 {
 	addOns[]=
 	{
-		"tavi",
-	    "ca_modules_animals",
-		"dayz_anim",
-		"dayz_code",
-		"dayz_communityassets",
-		"dayz_weapons",
-		"dayz_equip",
-		"dayz_epoch",
-		"dayz_vehicles",
-		"cacharacters_pmc",
-		"ca_modules_functions",
-		"glt_m300t",
-		"pook_h13",
-		"csj_gyroac",
-		"map_eu",
-		"jetskiyanahuiaddon",
-		"aif_arma1buildings",
-		"redryder",
-		"Anzio_20",
-		"mbg_killhouses",
-		"glt_bh_wreck_burned",
-		"ori_flying_fortress",
-		"ori_pragacopter",
-		"origins_pack_cars",
-		"ori_scraptank",
-		"ori_bigraft",
-		"ori_smallraft",
-		"ori_titanic",
-		"ori_scrapbuggy",
-		"ori_vil_pack",
-		"vil_ori_autogyro",
-		"ori_dc3",
-		"ori_submarine",
-		"ori_flying_fortress",
-		"base_buildings",
-		"mbg_buildings_3",
-		"mbg_african_buildings",
-		"gms_k98",
-		"RH_m14",
-		"FHQ_Remington",
-		"FHQ_Remington_ammo",
-		"FHQ_Remington_msr",
-		"FHQ_Remington_xm2010",
-		"FHQ_Remington_acr",
-		"FHQ_Remington_rsass",
-		"VILAS_WWP",
-		"VILAS_RW_Forces",
-		"VILAS_WWP_CO",
-		"VILAS_RW_Forces_CO",
-		"ddopp_taserpack",
-		"smk_anims_lite",
-		"oz_is_objects",
-		"nissan_350z",
-		"ussr_cheytac",
-		"bb_mercenary",
-		"warehouse",
-		"MicroAirVehicles",
-		"monaro",
-		"gsc_units_stalker_patch",
-		"american_law_enforcement",
-		"CYBP_Camels_Config",
-		"goosuksf",
-		"nof_menfsk",
-		"buildings3",
-		"frb",
-		"arma1_sf_port_patch",
-		"CAAir2_UH1Y",
-		"CAWater",
-		"sbh_paranoia"
+	//Map
+		"ori_taviana",
+	
+	//Epoch
+		"map_eu","ca_modules_animals","dayz_anim","dayz_code","dayz_communityassets","dayz_weapons","dayz_equip","cacharacters_pmc","ca_modules_functions",
+		"dayz_epoch","glt_m300t","pook_h13","csj_gyroac","jetskiyanahuiaddon","redryder","Anzio_20","fal_tierpark",
+		
+	//Overwatch
+		"gms_k98","RH_m14","FHQ_Remington","FHQ_Remington_ammo","FHQ_Remington_msr","FHQ_Remington_xm2010","FHQ_Remington_acr","FHQ_Remington_rsass","VILAS_WWP","VILAS_RW_Forces",
+		"VILAS_WWP_CO","VILAS_RW_Forces_CO","ddopp_taserpack","smk_anims_lite","MicroAirVehicles","oz_is_objects","monaro","gsc_units_stalker_patch","american_law_enforcement",
+		"CYBP_Camels_Config","nissan_350z","ussr_cheytac","bb_mercenary","goosuksf","frb","arma1_sf_port_patch","sbh_paranoia","goosuksf","nof_menfsk",
+	
+	
+	
+	//Origins
+		"ori_submarine","ori_flying_fortress","ori_pragacopter","origins_pack_cars","ori_scraptank","ori_bigraft","ori_smallraft","ori_titanic","ori_scrapbuggy",
+		"ori_dc3","sla_weapons","taviana_castle","rh_de_cfg","cadata","camisc3","CAWheeled","camisc_e","CABuildings","CAWheeled_E","CAMisc","caair",
+		"castructures_rail","osshdy","dayz","CAWheeled_E_Old_moto","cawheeled_e_v3s","cawheeled_e_volha","CAWheeled3_M1030","cawheeled_e_s1203","CAWheeled2_Ikarus",
+		"casounds","rth_small_tent"	
 	};
 	addOnsAuto[]=
 	{
-		"dayz_weapons",
-		"ca_modules_functions",
-		"warfarebuildings",
-		"tavi",
-		"origins_pack_cars",
-		"ori_vil_pack",
-		"ori_submarine",
-		"CAAir2_UH1Y",
-		"CAWater",
-		"ori_flying_fortress"
+	//Map
+		"ori_taviana",
+	
+	//Epoch
+		"map_eu","ca_modules_animals","dayz_anim","dayz_code","dayz_communityassets","dayz_weapons","dayz_equip","cacharacters_pmc","ca_modules_functions",
+		"dayz_epoch","glt_m300t","pook_h13","csj_gyroac","jetskiyanahuiaddon","redryder","Anzio_20","fal_tierpark",
+		
+	//Overwatch
+		"gms_k98","RH_m14","FHQ_Remington","FHQ_Remington_ammo","FHQ_Remington_msr","FHQ_Remington_xm2010","FHQ_Remington_acr","FHQ_Remington_rsass","VILAS_WWP","VILAS_RW_Forces",
+		"VILAS_WWP_CO","VILAS_RW_Forces_CO","ddopp_taserpack","smk_anims_lite","MicroAirVehicles","oz_is_objects","monaro","gsc_units_stalker_patch","american_law_enforcement",
+		"CYBP_Camels_Config","nissan_350z","ussr_cheytac","bb_mercenary","goosuksf","frb","arma1_sf_port_patch","sbh_paranoia","goosuksf","nof_menfsk",
+
+	//Origins
+		"ori_submarine","ori_flying_fortress","ori_pragacopter","origins_pack_cars","ori_scraptank","ori_bigraft","ori_smallraft","ori_titanic","ori_scrapbuggy",
+		"ori_dc3","sla_weapons","taviana_castle","rh_de_cfg","cadata","camisc3","CAWheeled","camisc_e","CABuildings","CAWheeled_E","CAMisc","caair",
+		"castructures_rail","osshdy","dayz","CAWheeled_E_Old_moto","cawheeled_e_v3s","cawheeled_e_volha","CAWheeled3_M1030","cawheeled_e_s1203","CAWheeled2_Ikarus",
+		"casounds","rth_small_tent"
 	};
 	randomSeed=11171215;
 	class Intel
@@ -506,11 +463,11 @@ class Intro
 {
 	addOns[]=
 	{
-		"tavi"
+		"ori_taviana"
 	};
 	addOnsAuto[]=
 	{
-		"tavi"
+		"ori_taviana"
 	};
 	randomSeed=6913869;
 	class Intel
@@ -528,11 +485,11 @@ class OutroWin
 {
 	addOns[]=
 	{
-		"tavi"
+		"ori_taviana"
 	};
 	addOnsAuto[]=
 	{
-		"tavi"
+		"ori_taviana"
 	};
 	randomSeed=4081731;
 	class Intel
@@ -550,11 +507,11 @@ class OutroLoose
 {
 	addOns[]=
 	{
-		"tavi"
+		"ori_taviana"
 	};
 	addOnsAuto[]=
 	{
-		"tavi"
+		"ori_taviana"
 	};
 	randomSeed=4975929;
 	class Intel
