@@ -58,7 +58,7 @@ spawn_public = switch (toLower worldName) do {
 			[localize "str_location_zelenogorsk",[2858,5313,0],0,0]
 		]
 	};
-	case "tavi": {
+	case "taviana": {
 		[
 			[localize "str_disp_srvsetup_random",[[9093,2614,0],[17588,4952,0],[15954,15847,0],[16674,13930,0],[11361,6685,0],[17744,10299,0],[18292,7537,0],[13561,19300,0],[15246,17425,0],[12268,9763,0]],0,0,1],
 			["Topolka",[9093,2614,0],0,0],
