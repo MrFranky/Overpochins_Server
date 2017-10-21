@@ -138,6 +138,7 @@ if (!isDedicated) then {
 	};
 	
 	if (dayz_townGenerator) then { execVM "\z\addons\dayz_code\compile\client_plantSpawner.sqf"; };
+	call compile preprocessFileLineNumbers "spawn\init.sqf";
 	execFSM "\z\addons\dayz_code\system\player_monitor.fsm";
 	//[false,12] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
 	if (DZE_R3F_WEIGHT) then {execVM "\z\addons\dayz_code\external\R3F_Realism\R3F_Realism_Init.sqf";};
