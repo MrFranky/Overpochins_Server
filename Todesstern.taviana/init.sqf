@@ -54,9 +54,9 @@ enableSentences false;
 dayz_paraSpawn = false; // Halo spawn
 DZE_BackpackAntiTheft = false; // Prevent stealing from backpacks in trader zones
 DZE_BuildOnRoads = false; // Allow building on roads
-DZE_PlayerZed = true; // Enable spawning as a player zombie when players die with infected status
+DZE_PlayerZed = false; // Enable spawning as a player zombie when players die with infected status
 DZE_R3F_WEIGHT = true; // Enable R3F weight. Players carrying too much will be overburdened and forced to move slowly.
-DZE_slowZombies = false; // Force zombies to always walk
+DZE_slowZombies = true; // Force zombies to always walk
 DZE_StaticConstructionCount = 0; // Steps required to build. If greater than 0 this applies to all objects.
 DZE_GodModeBase = false; // Make player built base objects indestructible
 DZE_requireplot = 1; // Require a plot pole to build  0 = Off, 1 = On
@@ -96,12 +96,14 @@ if (!isDedicated) then {
 
 initialized = false;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
+call compile preprocessFileLineNumbers "dayz_code\init\variables.sqf";
 progressLoadingScreen 0.05;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";
 progressLoadingScreen 0.1;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";
 progressLoadingScreen 0.15;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
+call compile preprocessFileLineNumbers "dayz_code\init\compiles.sqf";
 if (_verCheck) then {
 	#include "DZE_Hotfix_1.0.6.1A\init\compiles.sqf"
 };
@@ -143,6 +145,12 @@ if (!isDedicated) then {
 	execFSM "\z\addons\dayz_code\system\player_monitor.fsm";
 	//[false,12] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
 	if (DZE_R3F_WEIGHT) then {execVM "\z\addons\dayz_code\external\R3F_Realism\R3F_Realism_Init.sqf";};
+	
+	call compile preprocessFileLineNumbers "scripts\zsc\zscInit.sqf";
+	call compile preprocessFileLineNumbers "scripts\zsc\zscATMInit.sqf";
+	execVM "scripts\zsc\playerHud.sqf";
+	[] execVM "dayz_code\compile\remote_message.sqf";
+	
 	waitUntil {scriptDone progress_monitor};
 	cutText ["","BLACK IN", 3];
 	3 fadeSound 1;
