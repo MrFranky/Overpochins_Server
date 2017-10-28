@@ -125,5 +125,10 @@ dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_object];
 	PVDZE_veh_Init = _object;
 	publicVariable "PVDZE_veh_Init";
 
+	//Unlock Origins Vehicle
+	if((typeOF _object)in OriProtectedVeh)then{
+		_object animate ["hopa",1];_object animate ["doska",1];
+	};
+	
 	diag_log ("PUBLISH: Created " + (_class) + " with ID " + str(_uid));
 };

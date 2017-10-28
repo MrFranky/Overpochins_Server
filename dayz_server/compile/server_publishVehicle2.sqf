@@ -117,5 +117,9 @@ _key call server_hiveWrite;
 	PVDZE_veh_Init = _object;
 	publicVariable "PVDZE_veh_Init";
 	
+	//Unlock Origins Vehicle
+	if((typeOF _object)in OriProtectedVeh)then{
+		_object animate ["hopa",1];_object animate ["doska",1];
+	};
 	diag_log format["PUBLISH: %1(%2) bought %3 with ObjectUID %4",if (alive _activatingPlayer) then {name _activatingPlayer} else {"DeadPlayer"},getPlayerUID _activatingPlayer,_class,_uid];
 };

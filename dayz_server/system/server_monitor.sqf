@@ -268,6 +268,12 @@ if ((playersNumber west + playersNumber civilian) == 0) exitWith {
 		};
 		
 		if (_object isKindOf "AllVehicles") then {
+			
+			//Unlock Origins Vehicle
+			if((typeOF _object)in OriProtectedVeh)then{
+				_object animate ["hopa",1];_object animate ["doska",1];
+			};
+			
 			_object setVariable ["CharacterID", _ownerID, true];
 			_isAir = _object isKindOf "Air";
 			{

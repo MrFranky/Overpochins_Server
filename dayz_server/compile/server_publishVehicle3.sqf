@@ -153,6 +153,11 @@ _key call server_hiveWrite;
 	
 	dze_waiting = "success";
 	(owner _activatingPlayer) publicVariableClient "dze_waiting";
+
+	//Unlock Origins Vehicle
+	if((typeOF _object)in OriProtectedVeh)then{
+		_object animate ["hopa",1];_object animate ["doska",1];
+	};
 	
 	diag_log ("PUBLISH: " + str(_activatingPlayer) + " Upgraded " + (_class) + " with ID " + str(_uid));
 };
