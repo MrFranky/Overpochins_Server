@@ -1,0 +1,8 @@
+Version 0.0.10
+
++ Changelog hinzugefügt
++ Unlock Origins Vehicles
++ ZSC
++ Origins Map fix
++ Overpochins
++ ESSV3
