@@ -21,6 +21,29 @@ ZSC_bankTraders = ["Functionary1_EP1_DZ"]; // Array of trader classnames that ar
 ZSC_limitOnBank = false; // Have a limit on the bank? (i.e true or false) limits the global banking to the number below.
 ZSC_maxBankMoney = 5000000; // Default limit for bank objects.
 
+//Humanity System
+HumanityHL10 	= 150000;
+HumanityHL9 	= 100000;
+HumanityHL8 	= 70000;
+HumanityHL7 	= 50000;
+HumanityHL6	 	= 35000;
+HumanityHL5 	= 25000;
+HumanityHL4 	= 15000;
+HumanityHL3 	= 10000;
+HumanityHL2 	= 5000;
+HumanityHL1 	= 2500;
+HumanityBL1 	= -2500;
+HumanityBL2 	= -5000;
+HumanityBL3 	= -10000;
+HumanityBL4 	= -15000;
+HumanityBL5 	= -25000;
+HumanityBL6 	= -35000;
+HumanityBL7 	= -50000;
+HumanityBL8 	= -70000;
+HumanityBL9 	= -100000;
+HumanityBL10 	= -150000;
+
+
 //Unlock Origins Vehicle
 OriProtectedVeh=["ori_ZAZ968M","ori_taviander","ori_buchanka","ori_m3","ori_maniac","ori_KaTransp","ori_ScrapRaft","ori_bike_d2","ori_col_truck_tent","ori_col_truck_fuel","ori_gaika","ori_rth_originsmod_bathmobile","ori_ScrapBuggy","ori_submarine","ori_bigRaft"];
 

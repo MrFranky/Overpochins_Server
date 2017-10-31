@@ -148,7 +148,6 @@ if (!isDedicated) then {
 	
 	call compile preprocessFileLineNumbers "scripts\zsc\zscInit.sqf";
 	call compile preprocessFileLineNumbers "scripts\zsc\zscATMInit.sqf";
-	execVM "scripts\zsc\playerHud.sqf";
 	[] execVM "dayz_code\compile\remote_message.sqf";
 	
 	waitUntil {scriptDone progress_monitor};
