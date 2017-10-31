@@ -1,9 +1,61 @@
-﻿Version 0.0.11
+﻿Version 0.0.12
 
-+ Changelog verschoben
-+ Changelog hinzugefügt
-+ Unlock Origins Vehicles
-+ ZSC
-+ Origins Map fix
-+ Overpochins
-+ ESSV3
+0.0.12 
+========
+Custom HUD 
+- eigenes HUD erstellt
+-- Anzahl an Tötungen wird nun grafisch dargestellt
+--- Anzahl an Survivor Kills sind aktuell noch headshots, hier fehlt noch die Funktion im dayz_server.
+-- FPS Anzeige eingefügt
+-- Serverrestart Anzeige eingefügt
+-- Anzahl der Spieler Anzeige eingefügt
+-- Blutmengen Anzeige eingefügt
+-- ZSC Anzeige überarbeitet
+--- ZSC HUD entfernt
+--- Postion angepasst
+--- Neue Icons eingefügt
+-- Humanity wird nun grafisch und in Zahl angezeigt
+--- Humanity Icons eingefügt
+--- Humanity Anzeige eingefügt
+--- Humanity Level Anzeige eingefügt
+
+Sources:
+https://epochmod.com/forum/topic/16448-release-cens-custom-gui-for-epochoverpoch/
+https://community.bistudio.com/wiki/Dialog_Control
+https://community.bistudio.com/wiki/DialogControls-Text
+
+0.0.11
+========
+- Changelog verschoben
+
+0.0.10
+========
+- Changelog hinzugefügt
+
+0.0.9
+========
+- Unlock Origins Vehicles
+
+Source:
+http://opendayz.net/threads/release-epoch-overpoch-origins-1-8.22050/
+
+0.0.5
+========
+- ZSC
+
+Source:
+https://github.com/oiad/ZSC
+
+0.0.4
+========
+- Overpochins
+- Origins Map fix
+Source:
+http://opendayz.net/threads/release-epoch-overpoch-origins-1-8.22050/
+
+
+0.0.3
+========
+- ESSV3
+Source:
+https://epochmod.com/forum/topic/43012-release-essv3-enhanced-spawn-selection/
