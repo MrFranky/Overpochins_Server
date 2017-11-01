@@ -9,7 +9,7 @@
 **                                ╚═╝    ╚═════╝ ╚═════╝ ╚══════╝╚══════╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝                                **
 **                                                                                      powered by Chaotentrupp.net                                 **
 **      Script:      RscDisplayGenderSelect_epoch.hpp                                                                                               **
-**      Credits to:  Dayz Dev Team                                                                                                                  **
+**      Credits to:  Dayz Epoch Team                                                                                                                  **
 **      Source:      SQF/dayz_code/Configs/RscDisplay/RscDisplayGenderSelect.hpp                                                                    **
 **                                                                                                                                                  **
 ******************************************************************************************************************************************************
