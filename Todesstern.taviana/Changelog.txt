@@ -1,4 +1,9 @@
-﻿Version 0.0.12
+﻿Version 0.0.13
+
+0.0.13
+========
+Origins 1.8.2 Gender Selection fix
+- Es wird jetzt nur noch das Menü von Epoch angezeigt bei der Geschlechterauswahl
 
 0.0.12 
 ========
