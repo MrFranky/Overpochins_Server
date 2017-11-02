@@ -1,4 +1,10 @@
-﻿Version 0.0.13
+﻿Version 0.0.14
+
+
+0.0.14
+========
+Infistar eingebunden.
+-Infistar Dateien bleiben lokal auf den Servern und werden nicht im Git hochgeladen.
 
 0.0.13
 ========
