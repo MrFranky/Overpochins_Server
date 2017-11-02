@@ -1,5 +1,14 @@
-﻿Version 0.0.14
+﻿Version 0.0.16
 
+0.0.16 Infistar angepasst
+========
+Infistar Pfad angepasst
+Teleportieren aktiviert 
+
+0.0.15
+========
+Infistar verschoben
+-Teleport aktiviert
 
 0.0.14
 ========

@@ -8,7 +8,7 @@ dayZ_instance = 13; //Instance ID of this server
 dayZ_serverName = ""; //Shown to all players in the bottom left of the screen (country code + server number)
 
 //Game settings
-dayz_antihack = 1; // DayZ Antihack / 1 = enabled // 0 = disabled
+dayz_antihack = 0; // DayZ Antihack / 1 = enabled // 0 = disabled
 dayz_REsec = 1; // DayZ RE Security / 1 = enabled // 0 = disabled
 dayz_enableRules = true; //Enables a nice little news/rules feed on player login (make sure to keep the lists quick).
 dayz_quickSwitch = false; //Turns on forced animation for weapon switch. (hotkeys 1,2,3) False = enable animations, True = disable animations
