@@ -1,4 +1,10 @@
-﻿Version 0.0.16
+﻿Version 0.0.17
+
+0.0.17 Gender Select angepasst
+========
+- neues Hintergrundbild eingefügt
+- Bilder für männlichen und weiblichen Character sowie position geändert.
+
 
 0.0.16 Infistar angepasst
 ========
