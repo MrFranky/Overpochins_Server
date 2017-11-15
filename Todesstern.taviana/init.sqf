@@ -24,7 +24,7 @@ dayz_presets = "Custom"; //"Custom","Classic","Vanilla","Elite"
 if (dayz_presets == "Custom") then {
 	dayz_enableGhosting = false; //Enable disable the ghosting system.
 	dayz_ghostTimer = 60; //Sets how long in seconds a player must be disconnected before being able to login again.
-	dayz_spawnselection = 0; //(Chernarus only) Turn on spawn selection 0 = random only spawns, 1 = spawn choice based on limits
+	dayz_spawnselection = 1; //(Chernarus only) Turn on spawn selection 0 = random only spawns, 1 = spawn choice based on limits
 	dayz_spawncarepkgs_clutterCutter = 0; //0 = loot hidden in grass, 1 = loot lifted, 2 = no grass
 	dayz_spawnCrashSite_clutterCutter = 0;	// heli crash options 0 = loot hidden in grass, 1 = loot lifted, 2 = no grass
 	dayz_spawnInfectedSite_clutterCutter = 0; // infected base spawn 0 = loot hidden in grass, 1 = loot lifted, 2 = no grass 
@@ -37,7 +37,7 @@ if (dayz_presets == "Custom") then {
 
 //Temp settings
 dayz_DamageMultiplier = 2; //1 - 0 = Disabled, anything over 1 will multiply damage. Damage Multiplier for Zombies.
-dayz_maxGlobalZeds = 500; //Limit the total zeds server wide.
+dayz_maxGlobalZeds = 5000; //Limit the total zeds server wide.
 dayz_temperature_override = false; // Set to true to disable all temperature changes.
 
 enableRadio false;
@@ -47,9 +47,9 @@ enableSentences false;
 #include "\z\addons\dayz_code\configVariables.sqf" // Don't remove this line
 // See the above file for a full list including descriptions and default values
 // Uncomment the lines below to change the default loadout
-//DefaultMagazines = ["HandRoadFlare","ItemBandage","ItemPainkiller","8Rnd_9x18_Makarov","8Rnd_9x18_Makarov"];
-//DefaultWeapons = ["Makarov_DZ","ItemFlashlight"];
-//DefaultBackpack = "DZ_Patrol_Pack_EP1";
+DefaultMagazines = ["ItemBandage","ItemBandage","ItemPainkiller","8Rnd_9x18_Makarov","8Rnd_9x18_Makarov"];
+DefaultWeapons = ["Makarov_DZ","ItemFlashlight","ItemMap","ItemToolbox"];
+DefaultBackpack = "DZ_Assault_Pack_EP1";
 //DefaultBackpackItems = []; // Can include both weapons and magazines i.e. ["PDW_DZ","30Rnd_9x19_UZI"];
 dayz_paraSpawn = false; // Halo spawn
 DZE_BackpackAntiTheft = false; // Prevent stealing from backpacks in trader zones
@@ -66,8 +66,8 @@ DZE_SelfTransfuse = true; // Allow players to bloodbag themselves
 DZE_selfTransfuse_Values = [12000,15,120]; // [blood amount given, infection chance %, cooldown in seconds]
 MaxDynamicDebris = 700; // Max number of random road blocks to spawn around the map
 MaxVehicleLimit = 400; // Max number of random vehicles to spawn around the map
-spawnArea = 2500; // Distance around markers to find a safe spawn position
-spawnShoremode = 1; // Random spawn locations  1 = on shores, 0 = inland
+spawnArea = 1000; // Distance around markers to find a safe spawn position
+spawnShoremode = 0; // Random spawn locations  1 = on shores, 0 = inland
 EpochUseEvents = false; //Enable event scheduler. Define custom scripts in dayz_server\modules to run on a schedule.
 EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","any",0,"crash_spawner"],["any","any","any","any",15,"supply_drop"]];
 // EPOCH CONFIG VARIABLES END //
@@ -140,7 +140,6 @@ if (!isDedicated) then {
 	};
 	
 	if (dayz_townGenerator) then { execVM "\z\addons\dayz_code\compile\client_plantSpawner.sqf"; };
-	call compile preprocessFileLineNumbers "spawn\init.sqf";																	//ESSV3
 	_nil = [] execVM "clean_up_map.sqf";																						//Taviana mapfix Origins 1.8
 	execFSM "dayz_code\system\player_monitor.fsm";																				//Custom
 	//[false,12] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";

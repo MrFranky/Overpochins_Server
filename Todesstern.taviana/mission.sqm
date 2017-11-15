@@ -234,6 +234,7 @@ class Mission
 		};
 		class Item5
 		{
+			position[]={8350,0,18937}; //Kameni
 			name="spawn3";
 			type="Empty";
 		};
