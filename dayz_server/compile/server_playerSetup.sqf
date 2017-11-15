@@ -178,7 +178,7 @@ if (count _stats > 0) then {
 if (_randomSpot) then {
 	private ["_counter","_position","_isNear","_isZero","_mkr"];
 	if (!isDedicated) then {endLoadingScreen;};
-	_IslandMap = (toLower worldName in ["caribou","cmr_ovaron","dayznogova","dingor","dzhg","fallujah","fapovo","fdf_isle1_a","isladuala","lingor","mbg_celle2","namalsk","napf","oring","panthera2","sara","sauerland","smd_sahrani_a2","tasmania2010","tavi","trinity","utes"]);
+	_IslandMap = (toLower worldName in ["caribou","cmr_ovaron","dayznogova","dingor","dzhg","fallujah","fapovo","fdf_isle1_a","isladuala","lingor","mbg_celle2","namalsk","napf","oring","panthera2","sara","sauerland","smd_sahrani_a2","tasmania2010","tavi","taviana","trinity","utes"]);
 
 	//spawn into random
 	_findSpot = true;
@@ -189,9 +189,25 @@ if (_randomSpot) then {
 			// random spawn location selected, lets get the marker and spawn in somewhere
 			if (dayz_spawnselection == 1) then {_mkr = getMarkerPos ("spawn" + str(floor(random 6)));} else {_mkr = getMarkerPos ("spawn" + str(floor(random actualSpawnMarkerCount)));};
 		} else {
-			// spawn is not random, lets spawn in our location that was selected
-			_mkr = getMarkerPos ("spawn" + str(_spawnSelection));
-		};
+/**///============================== BASESPAWN =========================================
+/**/		if (_spawnSelection == 8) then {
+/**/			private["_PlotPos"];
+/**/			{
+/**/				if (_x getVariable ["ownerPUID","0"] == _playerID)
+/**/					exitWith {
+/**/						_PlotPos = _x;
+/**/					};
+/**/			} count (entities "Plastic_Pole_EP1_DZ");
+/**/		_mkr = getPosATL _PlotPos;
+/**/	} else {
+/**/		// spawn is not random, lets spawn in our location that was selected
+/**/		_mkr = getMarkerPos ("spawn" + str(_spawnSelection));
+/**/		};
+/**/	};
+/**///==================================================================================		
+//			// spawn is not random, lets spawn in our location that was selected
+//			_mkr = getMarkerPos ("spawn" + str(_spawnSelection));
+//			};
 		_position = ([_mkr,0,spawnArea,10,0,2,spawnShoremode] call BIS_fnc_findSafePos);
 		if ((count _position >= 2) // !bad returned position
 			&& {(_position distance _mkr < spawnArea)}) then { // !ouside the disk
@@ -223,7 +239,9 @@ _playerObj setVariable ["humanity",_humanity,true];
 _playerObj setVariable ["humanity_CHK",_humanity];
 _playerObj setVariable ["lastPos",getPosATL _playerObj];
 
-PVCDZ_plr_Login2 = [[0,respawn_west_original],_state,_worldspace,_randomSpot,([_randomSpot,_playerID] call spawn_config)];
+PVCDZ_plr_Login2 = [_worldspace,_state];
+//PVCDZ_plr_Login2 = [[0,respawn_west_original],_state,_worldspace,_randomSpot,([_randomSpot,_playerID] call spawn_config)];		//ESSv3
+
 _clientID = owner _playerObj;
 _clientID publicVariableClient "PVCDZ_plr_Login2";
 if (dayz_townGenerator) then {

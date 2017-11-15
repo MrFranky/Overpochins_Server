@@ -88,6 +88,26 @@ _charID = _primary select 2;
 /* PROCESS */
 _hiveVer = 0;
 
+/*********************************** Global Humanity *******************************************/
+// humanity
+private ["_primcharvar","_humanity"];
+_doLoop = 0;
+while {_doLoop < 5} do {
+	_key = format["CHILD:102:%1:",_charID];
+	_primcharvar = _key call server_hiveReadWrite;
+	if (count _primcharvar > 0) then {
+		if ((_primcharvar select 0) != "ERROR") then {
+			_doLoop = 9;
+		};
+	};
+	_doLoop = _doLoop + 1;
+};
+
+_humanity = _primcharvar select 5;
+Humanity = _humanity;
+(owner _playerObj) publicVariableClient "Humanity";
+/************************************************************************************************/
+
 if (!_isNew) then {
 	//RETURNING CHARACTER
 	_inventory = _primary select 4;

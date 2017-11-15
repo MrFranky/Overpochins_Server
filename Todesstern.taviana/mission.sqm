@@ -216,37 +216,36 @@ class Mission
 		};
 		class Item2
 		{
-			position[]={17587,206,4952};
+			position[]={5885,0,17476}; //ilya
 			name="spawn0";
 			type="Empty";
 		};
 		class Item3
 		{
-			position[]={9093,33,2614};
+			position[]={3829,0,7192}; //Mitrovice
 			name="spawn1";
 			type="Empty";
 		};
 		class Item4
 		{
-			position[]={15954,19,15847};
+			position[]={11048,0,951}; //Seven
 			name="spawn2";
 			type="Empty";
 		};
 		class Item5
 		{
-			position[]={13560,32,19300};
 			name="spawn3";
 			type="Empty";
 		};
 		class Item6
 		{
-			position[]={17743,255,10299};
+			position[]={12674,0,11954}; //Etanovsk 
 			name="spawn4";
 			type="Empty";
 		};
 		class Item7
 		{
-			position[]={15245,56,17424};
+			position[]={17296,0,7464}; //Byelov
 			name="spawn5";
 			type="Empty";
 		};

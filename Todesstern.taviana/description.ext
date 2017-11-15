@@ -114,13 +114,13 @@ class RscTitles
 	#include "dayz_code\gui\custom_HUD.h"																				// Custom HUD
 };
 
-
+#include "dayz_code\configs\defines.hpp"
 #include "dayz_code\gui\description.hpp"																			//ZSC
 #include "\z\addons\dayz_code\Configs\CfgLoot\CfgLoot.hpp"
 #include "dayz_code\Configs\CfgServerTrader.hpp"																	//ZSC
-#include "spawn\dialogs.hpp"																						//ESSV
 #include "\z\addons\dayz_code\Configs\RscDisplay\ZSCdefines.hpp"													//ZSC
 #include "dayz_code\configs\zscdialogs.hpp"																			//ZSC
 #include "dayz_code\configs\zscATMdialogs.hpp"																		//ZSC
 #include "dayz_code\configs\advancedTrading.hpp"																	//ZSC
 #include "dayz_code\configs\RscDisplay\RscDisplayGenderSelect_epoch.hpp"											// Origins 1.8.2 Gender Selection fix
+#include "dayz_code\configs\RscDisplay\RscDisplaySpawnSelecter_tavi.hpp"											// Origins 1.8.2 Gender Selection fix

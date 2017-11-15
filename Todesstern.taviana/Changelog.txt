@@ -1,4 +1,13 @@
-﻿Version 0.0.17
+﻿Version 0.0.18
+
+0.0.18 Spawnselect
+========
+- ESSV3 entfernt
+- Spawnselect für Chernarus auf Taviana umgeschrieben.
+-- Neue Postkarten hinzugefügt
+-- Basespawn hinzugefügt
+
+- Gender select gefixt
 
 0.0.17 Gender Select angepasst
 ========

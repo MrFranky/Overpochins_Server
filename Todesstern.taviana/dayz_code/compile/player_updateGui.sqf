@@ -257,7 +257,7 @@ else {
 };
 
 /************************************************* CUSTOM HUD START **************************************************************/
-/**/ private ["_ctrlMoneyCash","_ctrlMoneyBank","_cashMoney","_bankMoney","_ctrlServerRestart","_RestartTime","_ctrlPlayerOnline","_ctrlFPS","_ctrlFPSOuter","_fps","_ctrlBloodAmount","_ctrlBloodAmount","_playerHumanity", "_ctrlHumanityIcon","_ctrlHumanityAmount","_ctrlHumanityBorder","_ctrlHumanitySL","_ctrlHumanityBL","_ctrlHumanityHL","_humanityLevel","_ctrlhumanKills","_ctrlbanditKills","_ctrlsurvivorKills","_ctrlzombieKills"];
+/**/ private ["_ctrlMoneyCash","_ctrlMoneyBank","_cashMoney","_bankMoney","_ctrlServerRestart","_RestartTime","_ctrlPlayerOnline","_ctrlFPS","_ctrlFPSOuter","_fps","_ctrlBloodAmount","_ctrlBloodAmount","_playerHumanity", "_ctrlHumanityIcon","_ctrlHumanityAmount","_ctrlHumanityBorder","_ctrlHumanitySL","_ctrlHumanityBL","_ctrlHumanityHL","_ctrlhumanKills","_ctrlbanditKills","_ctrlsurvivorKills","_ctrlzombieKills"];
 /**/
 /**/	//Coins	
 /**/	_ctrlMoneyBank = _display displayCtrl 7100;
@@ -297,39 +297,29 @@ else {
 /**/	_ctrlHumanityBL 	= _display displayCtrl 7705;
 /**/
 /**/	_playerHumanity = player getVariable['humanity', 0];
-/**/
 /**/	_ctrlHumanityAmount ctrlSetText str(_playerHumanity);
 /**/
-/**/	switch true do {
-/**/		case ((_playerHumanity >= HumanityHL10) or (_playerHumanity <= HumanityBL10)): 																				{_humanityLevel = 10};
-/**/		case (((_playerHumanity >= HumanityHL9) and (_playerHumanity < HumanityHL10)) or ((_playerHumanity <= HumanityBL9) and (_playerHumanity > HumanityBL10))): 	{_humanityLevel = 9};
-/**/		case (((_playerHumanity >= HumanityHL8) and (_playerHumanity < HumanityHL9)) or ((_playerHumanity <= HumanityBL8) and (_playerHumanity > HumanityBL9))): 	{_humanityLevel = 8};
-/**/		case (((_playerHumanity >= HumanityHL7) and (_playerHumanity < HumanityHL8)) or ((_playerHumanity <= HumanityBL7) and (_playerHumanity > HumanityBL8))): 	{_humanityLevel = 7};
-/**/		case (((_playerHumanity >= HumanityHL6) and (_playerHumanity < HumanityHL7)) or ((_playerHumanity <= HumanityBL6) and (_playerHumanity > HumanityBL7))): 	{_humanityLevel = 6};
-/**/		case (((_playerHumanity >= HumanityHL5) and (_playerHumanity < HumanityHL6)) or ((_playerHumanity <= HumanityBL5) and (_playerHumanity > HumanityBL6))): 	{_humanityLevel = 5};
-/**/		case (((_playerHumanity >= HumanityHL4) and (_playerHumanity < HumanityHL5)) or ((_playerHumanity <= HumanityBL4) and (_playerHumanity > HumanityBL5))): 	{_humanityLevel = 4};
-/**/		case (((_playerHumanity >= HumanityHL3) and (_playerHumanity < HumanityHL4)) or ((_playerHumanity <= HumanityBL3) and (_playerHumanity > HumanityBL4))): 	{_humanityLevel = 3};
-/**/		case (((_playerHumanity >= HumanityHL2) and (_playerHumanity < HumanityHL3)) or ((_playerHumanity <= HumanityBL2) and (_playerHumanity > HumanityBL3))): 	{_humanityLevel = 2};
-/**/		default		{_humanityLevel = 1};
-/**/	};
+/**/	call fnc_getPlayerHumanityLevel;
 /**/
 /**/	_humanityIcon = "dayz_code\gui\status\humanity\%1.paa";
 /**/
-/**/	if((_playerHumanity > HumanityBL1) and (_playerHumanity < HumanityHL1)) then {
+/**/	if(PlayerHumanityLevel == 0) then {
 /**/		_ctrlHumanityIcon ctrlSetText format [_humanityIcon,"Zann-logo"];
 /**/		_ctrlHumanityAmount ctrlSetTextColor [0.81,0.74,0,1];
+/**/		_ctrlHumanityBL ctrlSetText "";
+/**/		_ctrlHumanityHL ctrlSetText "";
 /**/	};
 /**/
-/**/	if(_playerHumanity >= HumanityHL1) then {
+/**/	if(PlayerHumanityLevel > 0) then {
 /**/		_ctrlHumanityIcon ctrlSetText format [_humanityIcon,"rebel-logo"];
 /**/		_ctrlHumanityAmount ctrlSetTextColor [0.48,0,0,1];
-/**/		_ctrlHumanityHL ctrlSetText str(_humanityLevel);
+/**/		_ctrlHumanityHL ctrlSetText str(PlayerHumanityLevel);
 /**/	};
 /**/
-/**/	if(_playerHumanity <= HumanityBL1) then {
+/**/	if(PlayerHumanityLevel < 0) then {
 /**/		_ctrlHumanityIcon ctrlSetText format [_humanityIcon,"imperial-logo"];
 /**/		_ctrlHumanityAmount ctrlSetTextColor [0.8,0.8,0.8,1];
-/**/		_ctrlHumanityBL ctrlSetText str(_humanityLevel);
+/**/		_ctrlHumanityBL ctrlSetText str(PlayerHumanityLevel);
 /**/	};
 /**/
 /**/	// Kill counter

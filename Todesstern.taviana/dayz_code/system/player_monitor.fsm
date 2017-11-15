@@ -1577,7 +1577,7 @@ class FSM
                          "endLoadingScreen;" \n
                          "" \n
                          "_timeNem=diag_tickTime;" \n
-                         "_region = createDialog ""RscDisplaySpawnSelecter"";" \n
+                         "_region = createDialog ""RscDisplaySpawnSelecter_tavi"";" \n
                          "" \n
                          "dayz_loadScreenMsg = localize 'str_login_spawnLocation';" \n
                          "_timeNem=diag_tickTime;_spawnSelection = 9;" \n

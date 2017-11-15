@@ -1,3 +1,14 @@
+switch (toLower worldName) do {
+	case "napf";
+	case "ruegen";
+	case "sauerland" : {dayz_minpos = -1000; dayz_maxpos = 26000;};
+	case "tavi" : {dayz_minpos = -26000; dayz_maxpos = 26000;};
+	case "taviana" : {dayz_minpos = -26000; dayz_maxpos = 26000;};
+	case "chernarus" : {dayz_minpos = -1; dayz_maxpos = 16000;};
+	case default {dayz_minpos = -20000; dayz_maxpos = 20000;};
+};
+
+
 Z_singleCurrency = true;
 CurrencyName = "Space Cash"; 
 
@@ -22,27 +33,19 @@ ZSC_limitOnBank = false; // Have a limit on the bank? (i.e true or false) limits
 ZSC_maxBankMoney = 5000000; // Default limit for bank objects.
 
 //Humanity System
-HumanityHL10 	= 150000;
-HumanityHL9 	= 100000;
-HumanityHL8 	= 70000;
-HumanityHL7 	= 50000;
-HumanityHL6	 	= 35000;
-HumanityHL5 	= 25000;
-HumanityHL4 	= 15000;
-HumanityHL3 	= 10000;
-HumanityHL2 	= 5000;
-HumanityHL1 	= 2500;
-HumanityBL1 	= -2500;
-HumanityBL2 	= -5000;
-HumanityBL3 	= -10000;
-HumanityBL4 	= -15000;
-HumanityBL5 	= -25000;
-HumanityBL6 	= -35000;
-HumanityBL7 	= -50000;
-HumanityBL8 	= -70000;
-HumanityBL9 	= -100000;
-HumanityBL10 	= -150000;
+HumanityLevel_10 	= 150000;
+HumanityLevel_9 	= 100000;
+HumanityLevel_8 	= 70000;
+HumanityLevel_7 	= 50000;
+HumanityLevel_6	 	= 35000;
+HumanityLevel_5 	= 25000;
+HumanityLevel_4 	= 15000;
+HumanityLevel_3 	= 10000;
+HumanityLevel_2 	= 5000;
+HumanityLevel_1 	= 2500;
 
+PlayerHumanityLevel = 100;
+BaseSpawnLevel = 3;
 
 //Unlock Origins Vehicle
 OriProtectedVeh=["ori_ZAZ968M","ori_taviander","ori_buchanka","ori_m3","ori_maniac","ori_KaTransp","ori_ScrapRaft","ori_bike_d2","ori_col_truck_tent","ori_col_truck_fuel","ori_gaika","ori_rth_originsmod_bathmobile","ori_ScrapBuggy","ori_submarine","ori_bigRaft"];

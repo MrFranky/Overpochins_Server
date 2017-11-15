@@ -13,8 +13,8 @@
 **      Source:      https://epochmod.com/forum/topic/16448-release-cens-custom-gui-for-epochoverpoch/                                              **
 **                                                                                                                                                  **
 *****************************************************************************************************************************************************/
-//  x = ....  kleiner nach oben, größer nach unten
-//  y = ....  kleiner nach links, größer nach rechts
+//  x = ....  kleiner nach links, größer nach rechts
+//  y = ....  kleiner nach oben, größer nach unten
 //  w = ....  breite des bildes
 //  h = ....  höhe des bildes
 //  Bildformat 4:3 -> h=4, w=3 

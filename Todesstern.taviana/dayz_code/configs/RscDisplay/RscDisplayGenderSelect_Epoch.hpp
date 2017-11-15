@@ -127,7 +127,7 @@ class RscDisplayGenderSelect_epoch
 			size = 0.9;
             color[] = { 0.5, 0.5, 0.5, 1 };
             colorActive[] = { 1, 1, 1, 1 };
-            action = "closeDialog 0;dayz_DisplayGenderSelect = false;dayz_selectGender = 'Survivor2_DZ';";
+            action = "closeDialog 0;dayz_DisplayGenderSelect = false;dayz_selectGender = 'SurvivorW2_DZ';";
         };
         class GenderPic_Woman : RscActiveText_GENDER
 
@@ -142,7 +142,7 @@ class RscDisplayGenderSelect_epoch
 			size = 0.8;
             color[] = { 0.5, 0.5, 0.5, 1 };
             colorActive[] = { 1, 1, 1, 1 };
-            action = "closeDialog 0;dayz_DisplayGenderSelect = false;dayz_selectGender = 'SurvivorW2_DZ';";
+            action = "closeDialog 0;dayz_DisplayGenderSelect = false;dayz_selectGender = 'Survivor2_DZ';";
         };
         class Gender_Title: RscText_GENDER
         {
