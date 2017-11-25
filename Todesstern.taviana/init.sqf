@@ -148,6 +148,7 @@ if (!isDedicated) then {
 	call compile preprocessFileLineNumbers "scripts\zsc\zscInit.sqf";
 	call compile preprocessFileLineNumbers "scripts\zsc\zscATMInit.sqf";
 	[] execVM "dayz_code\compile\remote_message.sqf";
+	[] execVM "scripts\service_points\service_point.sqf";
 	
 	waitUntil {scriptDone progress_monitor};
 	cutText ["","BLACK IN", 3];
