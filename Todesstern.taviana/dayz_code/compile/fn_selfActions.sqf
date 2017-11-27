@@ -493,15 +493,15 @@ if (!isNull _cursorTarget && !_inVehicle && !_isPZombie && (player distance _cur
 	if (_isVehicle && {!_isMan} && {dayz_myCursorTarget != _cursorTarget} && {_hasToolbox} && {damage _cursorTarget < 1} && {_typeOfCursorTarget != "M240Nest_DZ"}) then {
 		if (s_player_repair_crtl < 0) then {
 			dayz_myCursorTarget = _cursorTarget;
-			_menu = dayz_myCursorTarget addAction [localize "str_actions_repairveh", "\z\addons\dayz_code\actions\repair_vehicle.sqf",_cursorTarget, 0, true, false];
+			_menu = dayz_myCursorTarget addAction [localize "str_actions_repairveh", "dayz_code\actions\repair_vehicle.sqf",_cursorTarget, 0, true, false];
 			if (!_isBicycle) then { //Bike wheels should not give full size tires. Also model does not update to show removed wheels.
 				if (!DZE_salvageLocked) then {
 					if (!_isLocked) then {
-						_menu1 = dayz_myCursorTarget addAction [localize "str_actions_salvageveh", "\z\addons\dayz_code\actions\salvage_vehicle.sqf",_cursorTarget, 0, true, false];
+						_menu1 = dayz_myCursorTarget addAction [localize "str_actions_salvageveh", "dayz_code\actions\salvage_vehicle.sqf",_cursorTarget, 0, true, false];			//custom salvage_vehicle
 						s_player_repairActions set [count s_player_repairActions,_menu1];
 					};
 				} else {
-					_menu1 = dayz_myCursorTarget addAction [localize "str_actions_salvageveh", "\z\addons\dayz_code\actions\salvage_vehicle.sqf",_cursorTarget, 0, true, false];
+					_menu1 = dayz_myCursorTarget addAction [localize "str_actions_salvageveh", "dayz_code\actions\salvage_vehicle.sqf",_cursorTarget, 0, true, false];
 					s_player_repairActions set [count s_player_repairActions,_menu1];
 				};
 			};
