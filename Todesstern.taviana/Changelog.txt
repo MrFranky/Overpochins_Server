@@ -1,4 +1,10 @@
-﻿Version 0.0.19
+﻿Version 0.0.20
+
+0.0.20 Repair and Salvage
+========
+- Repair und Salvage aus dem mod gezogen und angepasst.
+-- Man kann jetzt alles ausschlachten auch, wenn dieses unbeschädigt ist.
+-- LKWs geben beim Ausschlachten LKW-Reifen und benötigen nun auch LKW-Reifen für die Reparatur.
 
 0.0.19 Service Points
 ========
