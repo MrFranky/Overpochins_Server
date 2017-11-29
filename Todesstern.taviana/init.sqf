@@ -56,7 +56,7 @@ DZE_BackpackAntiTheft = false; // Prevent stealing from backpacks in trader zone
 DZE_BuildOnRoads = false; // Allow building on roads
 DZE_PlayerZed = false; // Enable spawning as a player zombie when players die with infected status
 DZE_R3F_WEIGHT = true; // Enable R3F weight. Players carrying too much will be overburdened and forced to move slowly.
-DZE_slowZombies = true; // Force zombies to always walk
+DZE_slowZombies = false; // Force zombies to always walk
 DZE_StaticConstructionCount = 0; // Steps required to build. If greater than 0 this applies to all objects.
 DZE_GodModeBase = false; // Make player built base objects indestructible
 DZE_requireplot = 1; // Require a plot pole to build  0 = Off, 1 = On
@@ -149,6 +149,8 @@ if (!isDedicated) then {
 	call compile preprocessFileLineNumbers "scripts\zsc\zscATMInit.sqf";
 	[] execVM "dayz_code\compile\remote_message.sqf";
 	[] execVM "scripts\service_points\service_point.sqf";
+	[] execVM "scripts\safezone\safezone.sqf";																					// Safezone
+	[] execVM "scripts\safezone\base.sqf";																						// Basefree Zombies
 	
 	waitUntil {scriptDone progress_monitor};
 	cutText ["","BLACK IN", 3];
