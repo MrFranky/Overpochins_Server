@@ -28,9 +28,30 @@ LOG_EnterLeave = true;       // This will log to your .rpt when a player enters 
 /* You can use USE_CANBUILD or/and (works together) the custom positions below (USE_POSITIONS) [position or zone,radius] */
 _infiSZ =
 [
+    [[10575.6,16779.3,0],50,true],     /*Boat Dealer lyubol*/
+    [[17332.7,12929.7,0],50,true],     /*Boat Dealer Molotovsk*/
+    [[5420.04,9502.85,0],50,true],     /*Boat Dealer Chernovar*/
+    [[10697.9,5984.51,0],50,true],     /*Boat Dealer Komarovo*/
+    
+    [[13345.5,8615.45,0],100,true],    /*Whole Saler große Insel*/
+    [[9858.09,7470.77,0],100,true],    /*Whole Saler kleine Insel*/
+    
+    [[16556.5,10160,0],200,true],      /*Aircraft Dealer große Insel*/
+    [[6814.29,8533.61,0],200,true],    /*Aircraft Dealer kleine Insel*/
+    
+    [[11699.6,15208.5,0],150,true],    /*Tradercity Lypestok*/
+    [[15308,9277.39,0],150,true],      /*Tradercity Sabina*/
+    [[5538.03,8763.41,0],150,true],    /*Tradercity Bilgrad*/
+    [[7376.19,4297.42,0],150,true],    /*Tradercity Branibor*/
+    [[4323.3,18001.66,0],150,true],    /*Tradercity Novistrana*/
+    [[23415.15,5296.90,0],150,true],   /*Trader Island*/
+    
+    [[16049.8,16299.7,0],150,true],    /*Hero Trader*/
+    [[10937.7,650.982,0],150,true]     /*Bandit Trader*/
 ];
 
 {
+    DZE_SafeZonePosArray set [(count DZE_SafeZonePosArray), [(_x select 0), (_x select 1)]];
 } forEach _infiSZ;
 
 if (isServer) exitWith
