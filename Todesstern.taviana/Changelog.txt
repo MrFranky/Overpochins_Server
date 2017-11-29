@@ -1,4 +1,9 @@
-﻿Version 0.0.21
+﻿Version 0.0.22
+
+0.0.22 Right-Click-Options
+========
+-Right-Click-Options eingefügt
+-Einstellung eigene Sichtweite über Fernglas und Entfernungsmesser
 
 0.0.21 NOS
 ========

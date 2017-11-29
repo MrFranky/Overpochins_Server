@@ -129,3 +129,4 @@ class RscTitles
 #include "dayz_code\configs\advancedTrading.hpp"																	//ZSC
 #include "dayz_code\configs\RscDisplay\RscDisplayGenderSelect_epoch.hpp"											// Origins 1.8.2 Gender Selection fix
 #include "dayz_code\configs\RscDisplay\RscDisplaySpawnSelecter_tavi.hpp"											// Origins 1.8.2 Gender Selection fix
+#include "scripts\custom\extra_rc.hpp"																				// Right-Click-Options
