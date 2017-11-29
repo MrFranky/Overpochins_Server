@@ -42,7 +42,12 @@ class CfgSounds
         sound[] = {scripts\radio\radio.ogg,0.4,1};
         titles[] = {};
     };
-};
+    class nitro  {                                                 // NOS Skript
+        name="nitro";                                              // Credits to:
+        sound[]={scripts\Nitro_NOS\nitro.ogg,0.9,1};               // Sandbird for creation
+        titles[] = {};                                             // and
+    };                                                             // FallingSheep for sharing
+};	
 class RscPictureGUI
 {
     access = 0;

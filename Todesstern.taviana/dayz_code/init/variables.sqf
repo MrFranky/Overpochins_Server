@@ -46,6 +46,7 @@ HumanityLevel_1 	= 2500;
 
 PlayerHumanityLevel = 100;
 BaseSpawnLevel = 3;
+PlayerHumanityLevelNOS = 4;
 
 //Unlock Origins Vehicle
 OriProtectedVeh=["ori_ZAZ968M","ori_taviander","ori_buchanka","ori_m3","ori_maniac","ori_KaTransp","ori_ScrapRaft","ori_bike_d2","ori_col_truck_tent","ori_col_truck_fuel","ori_gaika","ori_rth_originsmod_bathmobile","ori_ScrapBuggy","ori_submarine","ori_bigRaft"];
@@ -141,11 +142,13 @@ dayz_resetSelfActions = {
 	s_player_manageDoor = -1;
 
 	// Custom below
-	s_givemoney_dialog = -1;
-	s_bank_dialog = -1;
-	s_player_checkWallet = -1;
-	s_bank_dialog1 = -1;
-	s_bank_dialog2 = -1;
+	s_givemoney_dialog = -1;              //ZSC
+	s_bank_dialog = -1;                   //ZSC
+	s_player_checkWallet = -1;            //ZSC
+	s_bank_dialog1 = -1;                  //ZSC
+	s_bank_dialog2 = -1;                  //ZSC
+	s_player_nitroInstall = -1;           //Nitro
+	s_player_nitrobooston = -1;           //Nitro
 };
 
 call dayz_resetSelfActions;

@@ -217,6 +217,34 @@ if (_isPZombie) then {
 	};
 };
 
+/******************************************************************* NOS Script ********************************************************************/	
+/*****************************************Credits to: Sandbird for creation and FallingSheep for sharing *******************************************/	
+//Nitro action
+private ["_hasNOSinstalled"];
+    _hasNOSinstalled = _vehicle getVariable["nitroinstalled",0];
+    if (_inVehicle && (_vehicle isKindOf "Car") && ((speed _vehicle) >= 1)) then {
+        if (_inVehicle && _hasNOSinstalled == 1) then {
+            if (isnil("NITRO_Cond")) then {NITRO_Cond = false;};
+            if (s_player_nitrobooston <0) then {
+                if (NITRO_Cond) then {
+                    s_player_nitrobooston = _vehicle addAction [("<t color=""#39C1F3"">" + ("Nitro Off") + "</t>"),"scripts\Nitro_NOS\nitro.sqf", [_vehicle], 999, false,true,"","driver _target == _this"];
+                } else {
+                    s_player_nitrobooston = _vehicle addAction [("<t color=""#39C1F3"">" + ("Nitro On") + "</t>"),"scripts\Nitro_NOS\nitro.sqf", [_vehicle], 999, false,true,"","driver _target == _this"];
+                };
+            };
+        } else {
+            _vehicle removeAction s_player_nitrobooston;
+            s_player_nitrobooston = -1;
+        };
+  } else {
+        _vehicle removeAction s_player_nitrobooston;
+        s_player_nitrobooston = -1;
+        if (_hasNOSinstalled == 1) then {
+            _vehicle setVariable ["nitroinstalled", 1, true];
+        };
+    }; 
+/******************************************************************* NOS Script ********************************************************************/
+
 // Increase distance only if AIR or SHIP
 _allowedDistance = if ((_cursorTarget isKindOf "Air") or (_cursorTarget isKindOf "Ship")) then {8} else {4};
 
@@ -964,6 +992,26 @@ if (!isNull _cursorTarget && !_inVehicle && !_isPZombie && (player distance _cur
 		player removeAction s_bank_dialog2;
 		s_bank_dialog2 = -1;
 	};
+/******************************************************************* NOS Script ********************************************************************/	
+/*****************************************Credits to: Sandbird for creation and FallingSheep for sharing *******************************************/
+// Nitro Install
+private ["_hasNOSitems","_isNOSinstalled"];
+
+    if (("ItemJerrycan" in _magazinesPlayer) && ("ItemSodaRbull" in _magazinesPlayer)) then {
+       _hasNOSitems = true;
+    } else {
+       _hasNOSitems = false;
+    };
+    _isNOSinstalled = _cursorTarget getVariable ["nitroinstalled", 0];
+    if (_cursorTarget isKindOf "Car" && !locked _cursorTarget && _hasNOSitems && _isNOSinstalled == 0) then {
+        if (s_player_nitroInstall < 0) then {
+            s_player_nitroInstall = player addAction [("<t color=""#39C1F3"">" + ("Install NOS boost") +"</t>"), "scripts\Nitro_NOS\nitroinstall.sqf",_cursorTarget, 999, true, false, "",""];
+        };
+    } else {
+        player removeAction s_player_nitroInstall;
+        s_player_nitroInstall = -1;
+    };
+/******************************************************************* NOS Script ********************************************************************/		
 
 	// All Traders
 	if (_isMan && {!(isPlayer _cursorTarget)} && {_typeOfCursorTarget in serverTraders} && {!_isPZombie}) then {

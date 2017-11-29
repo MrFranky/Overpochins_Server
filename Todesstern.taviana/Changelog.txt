@@ -1,4 +1,8 @@
-﻿Version 0.0.20
+﻿Version 0.0.21
+
+0.0.21 NOS
+========
+- NOS Skript eingefügt
 
 0.0.20 Repair and Salvage
 ========
