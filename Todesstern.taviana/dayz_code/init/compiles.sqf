@@ -9,6 +9,7 @@ if (!isDedicated) then {
     player_humanityMorph    = compile preprocessFileLineNumbers "dayz_code\compile\player_humanityMorph.sqf";               // This line can be removed when Epoch 1.0.6.2 comes out.
     player_updateGui        = compile preprocessFileLineNumbers "dayz_code\compile\player_updateGui.sqf";                   // Humanity HUD
     player_selectSlot       = compile preprocessFileLineNumbers "dayz_code\compile\ui_selectSlot.sqf";                      // Right-Click-Options
+    player_craftItem        = compile preprocessFileLineNumbers "dayz_code\actions\player_craftItem.sqf";                   // Craft in Shed
 };
 
 
@@ -72,4 +73,14 @@ private ["_pUID","_playerhasbase","_playerHumanityBase"];
         } else {
             ((_this select 0) displayCtrl 90012) ctrlSetText "dayz_code\gui\spawn\spawn_nobase.paa";
         };
+};
+
+// CraftInShed
+vehicle_gear_count = {
+private["_counter"];
+	_counter = 0;
+	{
+		_counter = _counter + _x;
+	} count _this;
+	_counter
 };
