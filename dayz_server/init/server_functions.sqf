@@ -269,4 +269,30 @@ array_reduceSize = {
 // Precise base building 1.0.5
 call compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\kk_functions.sqf";
 #include "mission_check.sqf"
+
+/********************************************************************* Time Control *****************************************************************/
+/*************************************************************** Credits to Schalldampfer ***********************************************************/
+[] spawn {
+ private ["_dayTime","_speed","_interval"];
+ _interval = 10;
+ waitUntil {(!isNil "sm_done")};
+ waitUntil {sm_done};
+ while {true} do {
+  _dayTime = dayTime;
+  //========================TIME FUNCTION============================
+  _speed = 4.000;
+  if (_dayTime >= 8 && _dayTime <= 15) then {_speed =  1.000;};
+  if (_dayTime >  4 && _dayTime <   8) then {_speed = 10.000;};
+  if (_dayTime > 15 && _dayTime <  17) then {_speed = 10.000;};
+  if (_dayTime <= 4 || _dayTime >= 17) then {_speed =  1.000;};
+  //=================================================================
+  
+  skipTime (_interval*(_speed - 1.0)/3600);
+  dayzSetDate = date; publicVariable "dayzSetDate";
+  uisleep _interval;
+ };
+}; 
+/********************************************************************* Time Control *****************************************************************/
+/*************************************************************** Credits to Schalldampfer ***********************************************************/
+
 [] execVM "\z\addons\dayz_server\a2_infiSTAR\AH.sqf";
