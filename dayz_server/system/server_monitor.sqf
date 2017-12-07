@@ -381,8 +381,9 @@ diag_log format["Total Number of spawn locations %1", actualSpawnMarkerCount];
 
 if (isDedicated) then {endLoadingScreen;};
 
-[] ExecVM "\z\addons\dayz_server\WAI\init.sqf";												// WAI
-[] ExecVM "\z\addons\dayz_server\DZMSHotSpots\DZMSHotSpotsInit.sqf";						// DZMSHotSpots
+[] call compile preprocessFileLineNumbers "\z\addons\dayz_server\DZAI\init\dzai_initserver.sqf";		// DZAI
+[] ExecVM "\z\addons\dayz_server\WAI\init.sqf";															// WAI
+[] ExecVM "\z\addons\dayz_server\DZMSHotSpots\DZMSHotSpotsInit.sqf";									// DZMSHotSpots
 
 allowConnection = true;
 sm_done = true;
