@@ -1,4 +1,12 @@
-﻿Version 0.0.26
+﻿Version 0.0.27
+
+0.0.27 DZMSHotSpots
+========
+- DZMSHotSpots Mission Skript eingefügt
+-- Es spawnen 5 Fragezeichen auf der Karte, an einem ist eine Mission mit 6 Bots
+-- Es spawnt eine Straßensperre mit 6 Bots an zufälligen Stellen auf der Karte, diese wird nicht angezeigt.
+- WAI config bearbeitet
+-- M2 sind jetzt gefährtlicher
 
 0.0.26 WAI
 ========
